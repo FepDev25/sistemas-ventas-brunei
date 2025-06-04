@@ -1,17 +1,28 @@
 <div class="bg-white rounded-xl shadow-sm p-6">
-  <div class="flex justify-between items-center mb-6">
+  <div class="flex justify-between items-center mb-2">
     <h3 class="text-lg font-semibold text-gray-800">Productos Disponibles</h3>
-    <div class="flex space-x-2">
-      <button class="px-3 py-1 bg-blue-50 text-blue-600 rounded-lg text-sm">Todos</button>
-      <button class="px-3 py-1 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-sm">Zapatos</button>
-      <button class="px-3 py-1 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-sm">Ropa</button>
-      <button class="px-3 py-1 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-sm">Accesorios</button>
-    </div>
+    <!-- Category buttons will be dynamically generated below -->
+  </div>
+
+  <div class="flex space-x-2 mb-4 flex-wrap">
+    <button *ngFor="let category of categories"
+            (click)="selectCategory(category)"
+            [ngClass]="{'bg-blue-600 text-white': selectedCategory === category, 'bg-blue-50 text-blue-600': selectedCategory !== category}"
+            class="px-3 py-1 rounded-lg text-sm hover:bg-blue-200 mb-2">
+      {{ category }}
+    </button>
+  </div>
+
+  <div class="mb-4 relative">
+    <input type="text" placeholder="Buscar producto..."
+           [(ngModel)]="searchTerm" (input)="onSearchTermChange()"
+           class="search-input pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:border-blue-500 transition">
+    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
   </div>
 
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <app-product-card
-      *ngFor="let producto of productos"
+      *ngFor="let producto of displayedProducts"
       [producto]="producto"
     ></app-product-card>
   </div>
