@@ -1,0 +1,25 @@
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Contenido principal -->
+  <div class="flex-1 flex flex-col overflow-hidden">
+    <!-- Encabezado -->
+    <app-header></app-header>
+
+    <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Lista de productos -->
+        <div class="lg:col-span-2">
+          <app-product-list></app-product-list>
+        </div>
+
+        <div class="lg:col-span-1">
+          <app-cart></app-cart>
+        </div>
+      </div>
+    </main>
+
+    <app-footer></app-footer>
+  </div>
+</div>

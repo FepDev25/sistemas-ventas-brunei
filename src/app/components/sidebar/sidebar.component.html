@@ -1,0 +1,66 @@
+<div class="w-64 bg-white shadow-lg flex flex-col min-h-screen">
+  <div class="p-4 flex items-center justify-center gradient-bg">
+    <img src="https://via.placeholder.com/40" alt="Logo" class="h-10 w-10 rounded-full">
+    <h1 class="ml-3 text-white font-bold text-xl">BruneiDep</h1>
+  </div>
+
+  <div class="flex-1 overflow-y-auto">
+    <div class="p-4">
+      <div class="flex items-center mb-6">
+        <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+          <i class="fas fa-user text-blue-500 text-xl"></i>
+        </div>
+        <div class="ml-3">
+          <p class="font-medium text-gray-800">Cajero</p>
+          <p class="text-sm text-gray-500">Sesión activa</p>
+        </div>
+      </div>
+
+      <nav>
+        <a routerLink="/" routerLinkActive="bg-blue-50 text-blue-600"
+           class="sidebar-item flex items-center px-4 py-3 rounded-lg text-gray-600 font-medium">
+          <i class="fas fa-home mr-3"></i>
+          Inicio
+        </a>
+
+        <a routerLink="/ventas" routerLinkActive="bg-blue-50 text-blue-600"
+           class="sidebar-item flex items-center px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 mt-1">
+          <i class="fas fa-shopping-cart mr-3"></i>
+          Ventas
+        </a>
+
+        <a routerLink="/devoluciones" routerLinkActive="bg-blue-50 text-blue-600"
+           class="sidebar-item flex items-center px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 mt-1">
+          <i class="fas fa-exchange-alt mr-3"></i>
+          Devoluciones
+        </a>
+
+        <a routerLink="/reportes" routerLinkActive="bg-blue-50 text-blue-600"
+           class="sidebar-item flex items-center px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 mt-1">
+          <i class="fas fa-chart-line mr-3"></i>
+          Reportes
+        </a>
+
+        <a routerLink="/inventario" routerLinkActive="bg-blue-50 text-blue-600"
+           class="sidebar-item flex items-center px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 mt-1">
+          <i class="fas fa-box-open mr-3"></i>
+          Inventario
+        </a>
+
+        <a routerLink="/configuracion" routerLinkActive="bg-blue-50 text-blue-600"
+           class="sidebar-item flex items-center px-4 py-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 mt-1">
+          <i class="fas fa-cog mr-3"></i>
+          Configuración
+        </a>
+      </nav>
+
+    </div>
+  </div>
+
+  <div class="p-4 border-t">
+    <button class="w-full flex items-center justify-center px-4 py-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100">
+      <i class="fas fa-sign-out-alt mr-2"></i>
+      Cerrar sesión
+    </button>
+  </div>
+</div>

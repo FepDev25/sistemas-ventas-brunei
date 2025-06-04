@@ -1,0 +1,18 @@
+<div class="bg-white rounded-xl shadow-sm p-6">
+  <div class="flex justify-between items-center mb-6">
+    <h3 class="text-lg font-semibold text-gray-800">Productos Disponibles</h3>
+    <div class="flex space-x-2">
+      <button class="px-3 py-1 bg-blue-50 text-blue-600 rounded-lg text-sm">Todos</button>
+      <button class="px-3 py-1 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-sm">Zapatos</button>
+      <button class="px-3 py-1 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-sm">Ropa</button>
+      <button class="px-3 py-1 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg text-sm">Accesorios</button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <app-product-card
+      *ngFor="let producto of productos"
+      [producto]="producto"
+    ></app-product-card>
+  </div>
+</div>
